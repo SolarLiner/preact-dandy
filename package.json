@@ -8,6 +8,10 @@
   "unpkg": "lib/preact-dandy-umd.js",
   "types": "lib/preact-bulma.d.ts",
   "author": "SolarLiner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SolarLiner/preact-dandy"
+  },
   "license": "MIT",
   "private": false,
   "scripts": {

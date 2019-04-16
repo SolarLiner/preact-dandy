@@ -1,0 +1,39 @@
+{
+  "name": "preact-dandy",
+  "version": "0.1.0",
+  "description": "The simplest CSS-in-JS solution for Preact.",
+  "source": "src/index.ts",
+  "main": "lib/preact-dandy.js",
+  "module": "lib/preact-dandy.mjs",
+  "unpkg": "lib/preact-dandy-umd.js",
+  "types": "lib/preact-bulma.d.ts",
+  "author": "SolarLiner",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "microbundle",
+    "test": "parcel test/index.html"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.7",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "colornames": "^1.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "microbundle": "^0.11.0",
+    "parcel": "^1.12.3",
+    "preact": "^10.0.0-alpha.4",
+    "preact-combinations": "^0.1.0",
+    "prettier": "^1.17.0",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "typestyle": "^2.0.1"
+  }
+}

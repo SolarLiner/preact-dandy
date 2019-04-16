@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: ["google", "prettier", "plugin:@typescript-eslint/recommended"],
+  extends: ["plugin:@typescript-eslint/recommended", "prettier", "prettier/@typescript-eslint"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
@@ -19,7 +19,9 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
-    quotes: [1, "double"],
-    semi: [2, "always"]
+    indent: "off",
+    "prettier/prettier": "warn",
+    quotes: ["warn", "double"],
+    semi: ["error", "always"]
   }
 };

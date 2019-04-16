@@ -13,14 +13,8 @@ export default function styled<P extends MinimalProps = {}>(
   cssGenerator?: (props: RenderableProps<P>) => NestedCSSProperties
 ) {
   return (props: RenderableProps<P>) => {
-    const cssFinal = !!cssGenerator
-      ? Object.assign({}, css, filterNullUndefined(cssGenerator(props)))
-      : css;
-    const classNameFinal = classNames(
-      props.class,
-      props.className,
-      style(cssFinal)
-    );
+    const cssFinal = !!cssGenerator ? Object.assign({}, css, filterNullUndefined(cssGenerator(props))) : css;
+    const classNameFinal = classNames(props.class, props.className, style(cssFinal));
     const { children, ...attr } = props;
     return createElement(el, { ...attr, class: classNameFinal }, children);
   };

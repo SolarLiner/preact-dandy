@@ -12,7 +12,8 @@
   "private": false,
   "scripts": {
     "build": "microbundle",
-    "test": "parcel test/index.html"
+    "test": "parcel test/index.html",
+    "prepack": "microbundle"
   },
   "peerDependencies": {
     "preact": "^10.0.0-alpha.4"

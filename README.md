@@ -1,10 +1,15 @@
 # preact-dandy
 Small and fancy (like my pet dog) CSS-in-JS solution for preact.
 
+![License](https://img.shields.io/npm/l/preact-dandy.svg)
+![npm version](https://img.shields.io/npm/v/preact-dandy.svg)
+![preact peer dependency version](https://img.shields.io/npm/dependency-version/preact-dandy/peer/preact.svg)
+![npm type definitions](https://img.shields.io/npm/types/preact-dandy.svg)
+
 ## Install
 
 ```bash
-npm i preact-dandy # soon
+npm i preact-dandy
 ```
 
 ## Usage

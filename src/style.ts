@@ -3,6 +3,13 @@ import classNames from "classnames";
 import { style } from "typestyle";
 import { NestedCSSProperties } from "typestyle/lib/types";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function filterNullUndefined(obj: any) {
+  return Object.keys(obj)
+    .filter(k => typeof obj[k] !== "undefined")
+    .reduce((o, key) => Object.assign(o, { [key]: obj[key] }), {});
+}
+
 interface MinimalProps {
   class?: string;
   className?: string;
@@ -18,10 +25,4 @@ export default function styled<P extends MinimalProps = {}>(
     const { children, ...attr } = props;
     return createElement(el, { ...attr, class: classNameFinal }, children);
   };
-}
-
-function filterNullUndefined(obj: any) {
-  return Object.keys(obj)
-    .filter(k => typeof obj[k] !== "undefined")
-    .reduce((o, key) => Object.assign(o, { [key]: obj[key] }), {});
 }

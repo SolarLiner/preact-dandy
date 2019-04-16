@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
-    indent: "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "prettier/prettier": "warn",
     quotes: ["warn", "double"],
     semi: ["error", "always"]

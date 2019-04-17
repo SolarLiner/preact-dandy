@@ -14,12 +14,12 @@ interface MinimalProps {
   class?: string;
   className?: string;
 }
-export default function styled<P extends MinimalProps = {}>(
+export default function styled<P = {}>(
   el: keyof JSX.IntrinsicElements,
   css: NestedCSSProperties,
-  cssGenerator?: (props: RenderableProps<P>) => NestedCSSProperties
+  cssGenerator?: (props: RenderableProps<P & MinimalProps>) => NestedCSSProperties
 ) {
-  return (props: RenderableProps<P>) => {
+  return (props: RenderableProps<P & MinimalProps>) => {
     const cssFinal = !!cssGenerator ? Object.assign({}, css, filterNullUndefined(cssGenerator(props))) : css;
     const classNameFinal = classNames(props.class, props.className, style(cssFinal));
     const { children, ...attr } = props;

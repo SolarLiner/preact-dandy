@@ -6,7 +6,7 @@
   "main": "lib/preact-dandy.js",
   "module": "lib/preact-dandy.mjs",
   "unpkg": "lib/preact-dandy-umd.js",
-  "types": "lib/preact-dandy.d.ts",
+  "types": "lib/types/",
   "author": "SolarLiner",
   "repository": {
     "type": "git",
@@ -16,10 +16,11 @@
   "private": false,
   "scripts": {
     "build": "microbundle",
+    "build:types": "tsc --emitDeclarationOnly",
     "test": "parcel test/index.html",
     "lint": "eslint --ext .ts,.tsx src/**/*.{ts,tsx}",
     "lint:fix": "yarn lint --fix",
-    "prepack": "microbundle"
+    "prepack": "microbundle && tsc --emitDeclarationOnly"
   },
   "peerDependencies": {
     "preact": "^10.0.0-alpha.4"

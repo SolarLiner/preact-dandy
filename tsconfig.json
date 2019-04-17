@@ -1,11 +1,18 @@
 {
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"],
+  "include": [
+    "src/**/*.ts"
+  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": ["dom"],
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "lib": [
+      "dom"
+    ],
     "jsx": "react",
     "jsxFactory": "h",
+    "declaration": true,
+    "declarationDir": "lib/types",
   }
 }

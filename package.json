@@ -1,6 +1,6 @@
 {
   "name": "preact-dandy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The simplest CSS-in-JS solution for Preact.",
   "source": "src/index.ts",
   "main": "lib/preact-dandy.js",

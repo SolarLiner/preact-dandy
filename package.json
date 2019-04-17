@@ -6,7 +6,7 @@
   "main": "lib/preact-dandy.js",
   "module": "lib/preact-dandy.mjs",
   "unpkg": "lib/preact-dandy-umd.js",
-  "types": "lib/preact-bulma.d.ts",
+  "types": "lib/preact-dandy.d.ts",
   "author": "SolarLiner",
   "repository": {
     "type": "git",

@@ -10,7 +10,7 @@ function filterNullUndefined(obj: any) {
     .reduce((o, key) => Object.assign(o, { [key]: obj[key] }), {});
 }
 
-interface MinimalProps {
+export interface MinimalProps {
   class?: string;
   className?: string;
 }

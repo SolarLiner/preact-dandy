@@ -23,7 +23,7 @@ export default function styled<P = {}>(
 ) {
   return (props: RenderableProps<P & MinimalProps & JSX.IntrinsicElements[typeof el] & JSX.DOMAttributes>) => {
     const cssFinal = !!cssGenerator ? Object.assign({}, css, filterNullUndefined(cssGenerator(props))) : css;
-    const classNameFinal = classNames(props.class, props.className, style(cssFinal));
+    const classNameFinal = classNames(style(cssFinal), props.class, props.className);
     const { children, ...attr } = props;
     return createElement(el, { ...attr, class: classNameFinal }, children);
   };

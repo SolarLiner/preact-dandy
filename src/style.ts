@@ -1,4 +1,4 @@
-import { createElement, RenderableProps, JSX } from "preact";
+import { createElement, RenderableProps, JSX, FunctionalComponent } from "preact";
 import classNames from "classnames";
 import { style } from "typestyle";
 import { NestedCSSProperties } from "typestyle/lib/types";
@@ -21,10 +21,13 @@ export default function styled<P = {}>(
     props: RenderableProps<P & MinimalProps & JSX.IntrinsicElements[typeof el] & JSX.DOMAttributes>
   ) => NestedCSSProperties
 ) {
-  return (props: RenderableProps<P & MinimalProps & JSX.IntrinsicElements[typeof el] & JSX.DOMAttributes>) => {
+  const component: FunctionalComponent<
+    P & MinimalProps & JSX.IntrinsicElements[typeof el] & JSX.DOMAttributes
+  > = props => {
     const cssFinal = !!cssGenerator ? Object.assign({}, css, filterNullUndefined(cssGenerator(props))) : css;
     const classNameFinal = classNames(style(cssFinal), props.class, props.className);
     const { children, ...attr } = props;
     return createElement(el, { ...attr, class: classNameFinal }, children);
   };
+  component.displayName = `Styled ${el}`;
 }

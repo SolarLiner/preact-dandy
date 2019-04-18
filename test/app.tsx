@@ -40,8 +40,16 @@ const combinations = {
 export default () => (
   <Application>
     <h1>Example styled component with combinations of props</h1>
+    <Button color="red" onClick={testClick}>
+      Click me!
+    </Button>
+    <br />
     <Combinations component={Button} combinations={combinations}>
       Hello Internet! 🌍
     </Combinations>
   </Application>
 );
+
+function testClick() {
+  alert("Clicked!");
+}
